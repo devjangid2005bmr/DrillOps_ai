@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Toggle Menu</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">DrillOps AI</div>
+        <button class="menu-toggle" id="toggleBtn">☰</button>
+    </header>
+
+    
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+      
+
+        toggleBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+       
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('header') && !e.target.closest('.dropdown-menu')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
