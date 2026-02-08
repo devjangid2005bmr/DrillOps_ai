@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>{% block title %}DrillOps AI{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+
+    
+
+
+    {% block extra_css %}{% endblock %}
+    
+</head> 
+<body>
+
+    {% include "Header.html" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "Footer.html" %}
+
+</body>
+</html>
